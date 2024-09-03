@@ -1,0 +1,48 @@
+.tww-free-subscription-input-wrapper {
+    display: flex;
+}
+
+body .tww-free-subscription-input-wrapper input {
+    border-radius: 4px 0 0 4px !important;
+    border: 1px solid var(--brand-green) !important;
+    height: 50px;
+    width: 100% !important;
+    max-width: 350px;
+    display: flex;
+}
+
+.tww-free-subscription-input-wrapper button {
+    width: 120px;
+    text-align: center;
+    height: 50px;
+    border: 1px solid var(--brand-green) !important;
+    right: 0;
+    top: 0;
+    border-radius: 0 4px 4px 0 !important;
+    z-index: 9;
+    background: var(--brand-green);
+}
+
+body .tww-free-subscription-input-wrapper button[type="submit"].btn-tww-registration {
+    transform: none;
+    box-shadow: none !important;
+    width: 120px;
+    text-align: center;
+    height: 50px;
+    border: 1px solid var(--brand-green) !important;
+    right: 0;
+    top: 0;
+    border-radius: 0 4px 4px 0 !important;
+    z-index: 9;
+    background: var(--brand-green);
+    position: relative;
+}
+
+body .tww-free-subscription-input-wrapper button[type="submit"].btn-tww-registration:hover,
+body .tww-free-subscription-input-wrapper button[type="submit"].btn-tww-registration:focus {
+    background-color: var(--brand-green);
+    color: white;
+    transform: none;
+    box-shadow: none !important;
+    background: var(--brand-green) !important;
+}

@@ -1,0 +1,24 @@
+{
+    "name": "prudy/tww-video",
+    "description": "WordPress plugin for TWW videos.",
+    "type": "wordpress-plugin",
+    "license": "GPL2",
+    "autoload": {
+        "psr-4": {
+            "TwwVideo\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "The Wellness Way"
+        }
+    ],
+    "config": {
+        "platform": {
+            "php": "7.4.33"
+         }
+   },
+    "require": {
+        "htmlburger/carbon-fields": "^3.6"
+    }
+}

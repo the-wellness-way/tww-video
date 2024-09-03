@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Videojs/Nuevo - VASTPro Plugin</title>
+<link href="../examples/assets/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="header">
+	<div class="menu">
+		<a href="https://www.nuevodevel.com/nuevo/"><img src="../examples/assets/images/nuevodevel.png"></a>
+		<div class="browse">&larr; <a href="index.html">Back to examples</a></div>
+	</div>
+</div>
+
+<div class="container">
+	<h1>VASTPro Plugin by Nuevodevel.com</h1>	
+
+	<link href="../skins/treso/videojs.min.css" rel="stylesheet" type="text/css" />
+	<script src="../video.min.js"></script>
+	<script src="../plugins/vastpro.js"></script>
+	<script src="../nuevo.min.js"></script>
+
+
+	<div class="media-parent">
+		<div class="media-child">
+			<video id="player_1" class="video-js vjs-fluid" controls preload playsinline webkit-playsinline poster="../examples/assets/images/poster.jpg">
+				<source src="//opencdn.b-cdn.net/video/demo_720.mp4" type="video/mp4">
+				<source src="//opencdn.b-cdn.net/video/demo_720.webm" type="video/webm">
+			</video>
+		</div>
+	</div>
+
+	<script>
+	var player = videojs('player_1');
+	player.nuevo({ contextMenu:false });
+	player.vastAds ({ tagURL: "../examples/assets/vast/vastpro_sample.xml "});
+
+	</script>
+
+<div id="3214" style="margin:10px auto;max-width:100%;"></div>
+
+<div class="info">
+<br>
+The VastPro plugin is much more advanced version of the Vast/||Vpaid plugin. Apart of VAST linear video ads it supports VMAP protocol, multiple sequenced Ad Pods, Vast industry icons, Vast companions, non-linear banner ads, non-standard javascript based ads and outstream ads.<br />
+More VastPro examples and setup code tutorials you can find on <a class="under" href="https://www.nuevodevel.com/nuevo/showcase/vast-pro" target="blank">VastPro plugin</a>.
+</div>
+
+
+<h2>Code Setup</h2>
+<pre>
+
+<span class="comment">&lt;!--Load skin css, videojs and plugins inside &lt;body&gt; tag--&gt;</span>
+&lt;link href="../skins/shaka/videojs.min.css" rel="stylesheet" type="text/css" /&gt;
+
+&lt;script src="../video.min.js"&gt;&lt;/script&gt;
+&lt;script src="../nuevo.min.js"&gt;&lt;/script&gt;
+&lt;script src="../plugins/vastpro.js"&gt;&lt;/script&gt;
+
+<span class="comment">&lt;!--Video tag setup--&gt;</span>
+&lt;video id="player_1" class="video-js vjs-fluid" controls playsinline poster="../examples/assets/images/poster.jpg"&gt;
+	&lt;source src="//devnuevo.com/media/video/demo_720.mp4" type="video/mp4"&gt;
+	&lt;source src="//devnuevo.com/media/video/demo_720.webm" type="video/webm"&gt;
+&lt;/video&gt;
+
+<span class="comment">&lt;!--Initialize player and Nuevo pluging--&gt;</span>
+&lt;script&gt;
+	var player = videojs('player_1');
+	player.nuevo();
+	<span class="comment">&lt;!--Initialize VAST Ad--&gt;</span>
+	player.vastAds ({ tagURL: "../examples/assets/vast/vastpro_sample.xml" });
+&lt;/script&gt;
+</pre>
+
+<div class="info">
+<br>
+In video example above you can see 2 preroll ad pod videos, first with industry icon, second with companion banner ad loaded.
+
+<h2>Non standard multiple ads</h2>
+
+VastPro allows to play linear video ads defined through javascript. It's also possible to define an array of ads and play it at different time position. Such array of ads may include mix of VAST tags Urls and javascript based ads. Check source code how ads are defined for the player below. More information you can find on <a class="under" href="https://www.nuevodevel.com/nuevo/showcase/vast-examples/nonstandard">dedicated demo</a> Nuevodevel page.
+
+
+	<div class="media-parent">
+		<div class="media-child">
+			<video id="player_2" class="video-js vjs-fluid" controls preload playsinline webkit-playsinline poster="../examples/assets/images/poster.jpg">
+				<source src="//opencdn.b-cdn.net/video/demo_720.mp4" type="video/mp4">
+				<source src="//opencdn.b-cdn.net/video/demo_720.webm" type="video/webm">
+			</video>
+		</div>
+	</div>
+	
+	<script>
+	var player = videojs('player_2');
+	player.nuevo({ contextMenu:false,pipButton:false });
+	player.vastAds ({ ads: [
+		
+		{ tagURL: "//cdnzone.nuevodevel.com/pub/rand/rn1.xml" },
+		{ 
+			media: {src:"//cdnzone.nuevodevel.com/pub/5.0/media/xiaomi_480.mp4",type:"video/mp4"},
+			clickthrough: "//www.nuevodevel.com/nuevo/showcase/vast-pro",
+			timeOffset:20,
+			skip:10
+		},
+		{ 
+			media: {src:"//cdnzone.nuevodevel.com/pub/5.0/media/geneve_360.mp4",type:"video/mp4"},
+			clickthrough: "//www.nuevodevel.com/nuevo/showcase/vast-pro",
+			timeOffset:"50%",
+			clickThroughMethod: "link",
+			skip:5
+		}
+			
+	]
+	});
+	</script>	
+
+
+
+</div>
+
+</div>
+<div class="footer">
+&copy; 2008 - 2020, <a href="https://www.nuevodevel.com">Nuevo Development</a>. All rights reserved.
+</div>
+
+</body>
+</html>

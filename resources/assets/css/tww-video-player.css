@@ -1,0 +1,24 @@
+:root {
+    --brand-green: rgb(128, 183, 65);
+    --brand-grey: rgb(136, 136, 136);
+    --border-grey: rgb(204, 204, 204);
+    --border-grey-light: rgb(238, 238, 238);
+
+    --tww-green: #80b741;
+    --tww-green-light: rgb(242, 248, 236);
+    --tww-dark-grey: #414444;
+    --tww-medium-grey: #6d6d6d;
+    --tww-medium-light-grey: #a8a8a8;
+    --tww-light-grey: #ddddde;
+    --tww-beige: #dcd4cb;
+
+    --tww-white: white;
+
+    --black: rgb(0, 0, 0);
+    --red: rgb(153, 27, 27);
+
+    --active: rgb(220, 252, 231);
+    --active-alt: rgb(22, 101, 52);
+    --canceled: var(--red);
+    --pending: rgb(255, 255, 0);
+}
