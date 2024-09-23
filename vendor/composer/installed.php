@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'prudy/tww-video',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => null,
+        'pretty_version' => 'dev-video-push',
+        'version' => 'dev-video-push',
+        'reference' => 'c7472545777268f22572a0e2e02d063080b064ff',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -20,9 +20,9 @@
             'dev_requirement' => false,
         ),
         'prudy/tww-video' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => null,
+            'pretty_version' => 'dev-video-push',
+            'version' => 'dev-video-push',
+            'reference' => 'c7472545777268f22572a0e2e02d063080b064ff',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
